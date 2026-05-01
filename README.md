@@ -1,4 +1,5 @@
-1ka_generator.ipynb - генерация html для всех 150 пар  
+1ka_generator.ipynb - генерация html для всех 300 пар  
 conj_1ka.ipynb - генерация пар сравнений с балансом по уровням атрибутов, симуляция  
 cj_mapping - значения кодов по парам сравнений для склейки при анализе  
-conjoint_pairsf.txt - html коды для 150 пар
+conjoint_pairs_final.txt - html коды для 300 пар
+conjoint_pairs_300_final - 300 пар с балансом по уровням атрибутов
