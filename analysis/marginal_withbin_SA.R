@@ -146,7 +146,7 @@ annot_theme <- theme(
   plot.subtitle = element_text(colour = "grey30", size = 8, lineheight = 0.9)
 )
 
-# 1. Регион × этническая идентичность
+# 1. Регион * этническая идентичность
 plots_ethnic <- list()
 for (i in seq_along(region_levels)) {
   plots_ethnic[[i]] <- run_binning(
@@ -164,7 +164,7 @@ p_identity_ethnic <- wrap_plots(plots_ethnic, ncol = 2) +
     subtitle = "X: этническая идентичность; Y: эффект на вероятность выбора. База: Восточная Европа, 95% ДИ",
     theme = annot_theme) & panel_theme
 
-# 2. Регион × гражданская идентичность
+# 2. Регион * гражданская идентичность
 plots_civic <- list()
 for (i in seq_along(region_levels)) {
   plots_civic[[i]] <- run_binning(
@@ -182,7 +182,7 @@ p_identity_civic <- wrap_plots(plots_civic, ncol = 2) +
     subtitle = "X: гражданская идентичность; Y: эффект на вероятность выбора. База: Восточная Европа, 95% ДИ",
     theme = annot_theme) & panel_theme
 
-# 3. Политика × доверие
+# 3. Политика * доверие
 plots_trust <- list()
 for (i in seq_along(politics_levels)) {
   plots_trust[[i]] <- run_binning(
@@ -200,7 +200,7 @@ p_trust_c <- wrap_plots(plots_trust, ncol = 2) +
     subtitle = "X: доверие; Y: эффект на вероятность выбора. База: параллельный экспорт, 95% ДИ",
     theme = annot_theme) & panel_theme
 
-# 4. Регион × авторитаризм
+# 4. Регион * авторитаризм
 plots_author <- list()
 for (i in seq_along(region_levels)) {
   plots_author[[i]] <- run_binning(
@@ -218,7 +218,7 @@ p_author_c <- wrap_plots(plots_author, ncol = 2) +
     subtitle = "X: авторитаризм; Y: эффект на вероятность выбора. База: Восточная Европа, 95% ДИ",
     theme = annot_theme) & panel_theme
 
-# 4b. Политика × авторитаризм (новая модерация)
+# 4b. Политика * авторитаризм (новая модерация)
 plots_polauthor <- list()
 for (i in seq_along(politics_levels)) {
   plots_polauthor[[i]] <- run_binning(
@@ -236,7 +236,7 @@ p_polauthor <- wrap_plots(plots_polauthor, ncol = 2) +
     subtitle = "X: авторитаризм; Y: эффект на вероятность выбора. База: параллельный экспорт, 95% ДИ",
     theme = annot_theme) & panel_theme
 
-# 5. Внешний вид × частота контакта
+# 5. Внешний вид * частота контакта
 p_contact_c <- run_binning(
   d, D = "trad_clothes", X = "contact_index_c",
   Z = c("region", "motivation", "education", "employer", "gender",
@@ -252,7 +252,7 @@ p_contact_c <- run_binning(
         axis.text = element_text(size = 7),
         legend.position = "none")
 
-# 6. Внешний вид × валентность контакта
+# 6. Внешний вид * валентность контакта
 p_valence_c <- run_binning(
   d, D = "trad_clothes", X = "valence_index_c",
   Z = c("region", "motivation", "education", "employer", "gender",
@@ -268,7 +268,7 @@ p_valence_c <- run_binning(
         axis.text = element_text(size = 7),
         legend.position = "none")
 
-# 7. Политика × поддержка власти
+# 7. Политика * поддержка власти
 plots_support <- list()
 for (i in seq_along(politics_levels)) {
   plots_support[[i]] <- run_binning(
